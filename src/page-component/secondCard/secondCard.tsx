@@ -2,10 +2,10 @@
 import './secondCard.css';
 import {NumberTourUi} from "../../components/ui/Number.tsx";
 import {TitleCloseNumber} from "../../components/ui/TitleCloseNumber.tsx";
-import Image from "../../assets/cards/secondCard.png"
+import Image from "../../assets/cards/firstCard.png"
 export const SecondCard = () => {
     return <div className={""}>
-        <div className={"mx-52   relative "}>
+        <div className={"mx-5 md:mx-52   relative "}>
             <div className="">
                 <div className={"absolute h-fit right-0 flex space-y-20"}>
                     <NumberTourUi numberTour={1} />

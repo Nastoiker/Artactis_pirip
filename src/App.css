@@ -1,12 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 #root {
   /*max-width: 1280px;*/
   margin: 0 auto;
   text-align: center;
 }
 
+@font-face {
+  font-family: "GGKizhichBold ";
+  src: local("GG KizhichBold"),
+  url("./fonts/GG Kizhich Bold.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "GGKizhichRegular";
+  src: local("GGKizhichRegular"),
+  url("./fonts/GG Kizhich Regular.otf") format("truetype");
+  font-weight: normal;
+}
+.MainText {
+  font-family: "GGKizhichRegular", serif;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -22,6 +38,13 @@
 .BackGroundMainPage {
   background-image: url("./assets/mainImage.jpg") ;;
   z-index: -1;
+  background-size: 100% 100%;
+  object-fit: contain;
+  height: 100%;
+}
+.Map {
+  background-image: url("./assets/card.png") ;;
+  z-index: 50;
   background-size: 100% 100%;
   object-fit: contain;
   height: 100%;

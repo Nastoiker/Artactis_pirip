@@ -12,6 +12,7 @@ import {ThirdCard} from "./page-component/thirdCard/ThirdCard.tsx";
 import {SixCard} from "./page-component/SixCard/SixCard.tsx";
 import {FiveCard} from "./page-component/FiveCard/FiveCard.tsx";
 import {FourCard} from "./page-component/fourCard/fourCard.tsx";
+import {ReviewContainer} from "./components/reviews/Reviews.container";
 function App() {
 
     return (
@@ -38,7 +39,11 @@ function App() {
                 <FourCard />
                 <FiveCard />
                 <SixCard />
-                <Review review={{ name: 'asdasdas', comment: 'asdadasdasd', img: Woman, date: '02.01.2004' }} />
+
+            </div>
+            <div className={"flex content-center"}>
+                <ReviewContainer reviews={[{ name: 'asdasdas', comment: 'asdasdadasdasdasdadasdasdasdadasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasdasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasd', img:  Woman },{ name: 'asdasdas', comment: 'asdasdadasdasdasdadasdasdasdadasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasdasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasd', img:  Woman }]}/>
+
             </div>
         </div>
 

@@ -1,6 +1,5 @@
 export interface IReview {
-    img: string,
+    img: any,
     name: string,
     comment: string
-    date: string;
 }

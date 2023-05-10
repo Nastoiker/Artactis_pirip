@@ -3,10 +3,10 @@ import {NumberTourUi} from "../../components/ui/Number.tsx";
 import {TitleCloseNumber} from "../../components/ui/TitleCloseNumber.tsx";
 import Image from "../../assets/cards/Finshing.png";
 export const FourCard = () => {
-    return <div className={""}>
+    return <div className={"min-h-screen max-h-full  relative "}>
         <div className={"mx-5 md:mx-52    relative "}>
             <div className="">
-                <div className={"absolute h-fit right-0 flex space-y-20"}>
+                <div className={"absolute h-fit  top-28 sm:top-0 right-0 flex space-y-20"}>
                     <NumberTourUi numberTour={3} />
                     <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
                     <TitleCloseNumber  text={'РЫБАЛКА'}/>
@@ -19,6 +19,6 @@ export const FourCard = () => {
                 </div>
             </div>
         </div>
-        <img className="w-full h-full" src={Image} alt=""/>
+        <img className="w-full blur-sm min-h-2/3 h-auto contain absolute bottom-0" src={Image} alt=""/>
     </div>
 }

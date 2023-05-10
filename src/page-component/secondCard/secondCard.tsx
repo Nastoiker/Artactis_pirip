@@ -11,7 +11,7 @@ export const SecondCard = () => {
                     <NumberTourUi numberTour={1} />
                     <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
                     <TitleCloseNumber  text={'ПРИБЫТИЕ'}/>
-                    <p className={"text-start text-2xl absolute w-full top-20  text-white"}>
+                    <p className={"z-10 text-start text-2xl absolute w-full top-20  text-white"}>
                         - Прибытие в Архангельск
                         - Заселение в отель и отдых
                         - Обзорная экскурсия по историческому центру Архангельска, включающая крепость Святого Михаила, музей древнерусской культуры и быта, собор Святого Фаддея

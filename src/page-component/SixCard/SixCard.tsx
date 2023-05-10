@@ -6,7 +6,7 @@ export const SixCard = () => {
     return <div className={"min-h-screen  max-h-full relative   "}>
         <div className={"mx-5 md:mx-52   relative "}>
             <div className="">
-                <div className={"absolute h-fit top-48 left-0 mx-auto  sm:w-96  z-50 right-0 flex space-y-20"}>
+                <div className={"absolute h-fit top-16 left-0 mx-auto  sm:w-96  z-50 right-0 flex space-y-20"}>
                     <NumberTourUi numberTour={5} />
                     <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
                     <TitleCloseNumber  text={'Последний день'}/>

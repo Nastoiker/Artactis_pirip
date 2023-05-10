@@ -3,7 +3,7 @@ import {Review} from "./Review.tsx";
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from "keen-slider/react";
 export const ReviewContainer = ({reviews}: ReviewContainerProps) => {
-    const [sliderRef, instanceRef] = useKeenSlider(
+    const [sliderRef] = useKeenSlider(
         {
             slideChanged() {
                 console.log('slide changed')

@@ -6,7 +6,6 @@ import {ButtonTransparent} from "./assets/button/buttonTransparent.tsx";
 import {Htag} from "./components/Htag/Htag.tsx";
 import {FirstCard} from "./page-component/firstCard/firstCard.tsx";
 import {SecondCard} from "./page-component/secondCard/secondCard.tsx";
-import {Review} from "./components/reviews/Review.tsx";
 import Woman from "./assets/reviews/Victoria.jpg";
 import {ThirdCard} from "./page-component/thirdCard/ThirdCard.tsx";
 import {SixCard} from "./page-component/SixCard/SixCard.tsx";

@@ -23,15 +23,15 @@ function App() {
             <div className={"  my-0  min-h-screen contain bg-no-repeat w-full mx-auto gap-5  BackGroundMainPage h-full text-white"}>
                 <NavigationMenu menu={MainPage.navigation}/>
                 {/*<img src="./assets/Logo.svg" className={"w-10 h-10"} alt=""/>*/}
-                <div className={"text-center grid  content-center my-20"}>
-                    <h1 className={"mx-auto MainText text-6xl xl:text-9xl w-fit xl:w-[900px] break-words mt-48"}>{MainPage.title}</h1>
-                    <div className={"flex justify-center space-x-5 my-10"}><Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ</Htag><Htag type={"h4"} className={"text-"}>С НАШЕЙ ПОМОЩЬЮ</Htag></div>
-                    <ButtonTransparent className={"min-w-20  w-fit mx-auto"}><Htag type={'h1'} className="mt-0">Купить тур </Htag></ButtonTransparent>
+                <div className={"text-center grid  content-center sm:my-20"}>
+                    <h1 className={"mx-auto MainText text-5xl xl:text-9xl w-fit xl:w-[900px] break-words mt-48"}>{MainPage.title}</h1>
+                    <div className={"flex justify-center sm:space-x-5 my-10"}><Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ</Htag><Htag type={"h4"} className={"text-"}>С НАШЕЙ ПОМОЩЬЮ</Htag></div>
+                    <ButtonTransparent className={"min-w-20  w-fit mx-auto"}><Htag type={'h2'} className="mt-0">Купить тур </Htag></ButtonTransparent>
                 </div>
 
             </div>
             <div className={" mx-auto"}>        <FirstCard />
-            </div>
+           </div>
             <div className={"Map"}>
                 <SecondCard />
                 <ThirdCard />

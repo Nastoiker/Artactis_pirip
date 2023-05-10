@@ -10,7 +10,7 @@ export const FourCard = () => {
                     <NumberTourUi numberTour={3} />
                     <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
                     <TitleCloseNumber  text={'РЫБАЛКА'}/>
-                    <p className={"text-start text-2xl absolute w-full top-20  text-white"}>
+                    <p className={"z-10 text-start text-2xl absolute w-full top-20  text-white"}>
                         - Поездка на северо-восток Архангельской области в 150 км от города до Беломорска
                         - Визит музеев, связанных с людьми Поморья
                         - Прогулка по пляжу Белого моря

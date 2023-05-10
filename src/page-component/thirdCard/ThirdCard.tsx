@@ -10,7 +10,7 @@ export const ThirdCard = () => {
                     <NumberTourUi numberTour={2} />
                     <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
                     <TitleCloseNumber  text={'ПРОГУЛКА ПО РЕКЕ'}/>
-                    <p className={"text-start text-2xl absolute w-full top-20  text-white"}>
+                    <p className={"text-start z-10 text-2xl absolute w-full top-20  text-white"}>
                         - Посещение Архангельского областного художественного музея
                         - Экскурсия на лодке по реке Северной Двине
                         - Поездка на музей-усадьбу Пурецких в 20 км от Архангельска

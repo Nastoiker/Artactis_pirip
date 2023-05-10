@@ -1,0 +1,7 @@
+.BackGroundFont {
+     background-image: url("../../assets/cards/backGroundSecondImage.png") ;;
+     z-index: -1;
+     background-size: 100% 100%;
+     object-fit: contain;
+     height: 100%;
+ }

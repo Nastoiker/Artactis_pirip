@@ -1,0 +1,17 @@
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(183, 229, 163);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    transition: height 1s linear;
+}
+
+.notificationVisible {
+    height: 40px;
+}

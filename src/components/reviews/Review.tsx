@@ -1,5 +1,6 @@
 import { ReviewProps } from "./Review.props.ts";
 
+
 // export const Review = ({review}: ReviewProps) => {
 //     return <div className={"flex flex-col justify-center sm:flex w-full space-x-20"}>
 //         <div className={"w-full "}>
@@ -17,7 +18,9 @@ import { ReviewProps } from "./Review.props.ts";
 //     </div>
 // }
 export const Review = ({ name, comment, img }: ReviewProps) => {
+
   return (
+
     <div
       className={"mx-auto space-y-10 xl:flex w-fit items-center xl:space-x-20"}
     >
@@ -30,6 +33,7 @@ export const Review = ({ name, comment, img }: ReviewProps) => {
         <h1 className={"ml-0 text-4xl text-teal-500"}>{name}</h1>
         <p className={" text-white break-words w-72 sm:w-[800px]"}>{comment}</p>
       </div>
+
     </div>
   );
 };

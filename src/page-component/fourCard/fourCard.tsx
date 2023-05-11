@@ -5,7 +5,12 @@ import "./fourCss.css";
 
 export const FourCard = () => {
   return (
-    <div className={" min-h-screen max-h-full  relative "}>
+    <div className={"min-h-screen xl:min-h-[1200px] max-h-full  relative "}>
+        <img
+            className="w-full  min-h-2/3 h-auto contain absolute sm:bottom-0"
+            src={Image}
+            alt=""
+        />
       <div className={"mx-5 md:mx-52    relative "}>
         <div className="">
           <div
@@ -28,11 +33,7 @@ export const FourCard = () => {
           </div>
         </div>
       </div>
-      <img
-        className="w-full  min-h-2/3 h-auto contain absolute bottom-0"
-        src={Image}
-        alt=""
-      />
+
     </div>
   );
 };

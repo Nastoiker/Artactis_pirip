@@ -1,43 +1,55 @@
-import { useForm } from "react-hook-form";
+import {FieldValue, useForm} from "react-hook-form";
 import { Htag } from "../Htag/Htag";
-import { InputComponent } from "../input/input";
+import { Input } from "../input/input";
 import "./EmailForm.module.css";
-import { FieldsetHTMLAttributes, useState } from "react";
-import { ButtonTransparent } from "../../assets/button/buttonTransparent";
+import {FieldsetHTMLAttributes, useRef, useState} from "react";
+import { ButtonTransparent } from "../button/buttonTransparent";
+import  {MessageHub} from "../Notify/Notify";
+type AddFunction = (msg: string) => void
+
 export const EmailForm = () => {
-  const [isLoading, setIsLoading] = useState();
+  const ref = useRef<null | AddFunction>(null)
+
+  const [isLoading, setIsLoading] = useState<boolean>()
+  const [isError, setError] = useState<boolean>()
+  const [isCorrect, setIsCorrect] = useState<boolean>();
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<{ email: string }>({});
+  } = useForm<FieldValue<any>>({});
   const onSubmit = async () => {
     try {
       new Promise((resolve) => {
         setTimeout(() => {
           resolve("string"), 1000;
         });
+
       });
       reset();
+      ref.current?.('Успешная регистрация')
+      setIsCorrect(true);
+      console.log(11);
     } catch (e) {}
   };
   return (
     <form
-      className="FollowsContainer  min-h-screen-[800px] md:flex justify-around items-center p-20"
+      className="FollowsContainer  min-h-screen-[800px] md:flex justify-around items-center p-10 md:p-20"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="w-full md:w-1/3">
-        <h1 className="text-start text-teal-500 text-4xl">
+        <h1 className="text-start text-teal-500 text-2xl  md:text-4xl">
           Оставьте свои контакты, чтоб узнавать об актуальных турах и новостях
           первым
         </h1>
       </div>
       <div className="ml-0 h-full min-width-[50%] space-y-10">
-        <InputComponent
-          {...register("email", {
-            required: { value: true, message: "Заполните login" },
-          })}
+        <Input
+            {...register("email", {
+              required: { value: true, message: "Заполните login" },
+            })}
+            id={"email"}
           className="border-teal-500"
           placeholder="email"
         />
@@ -45,6 +57,13 @@ export const EmailForm = () => {
           ПОДПИСАТЬСЯ
         </ButtonTransparent>
       </div>
+
+                 <MessageHub
+          children={(add: AddFunction) => {
+            ref.current = add
+          }}
+      />
+
     </form>
   );
 };

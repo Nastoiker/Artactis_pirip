@@ -3,10 +3,15 @@ import { TitleCloseNumber } from "../../components/ui/TitleCloseNumber.tsx";
 import Image from "../../assets/cards/fourCard.png";
 export const FiveCard = () => {
   return (
-    <div className={"min-h-[800px]  max-h-full relative"}>
+    <div className={"min-h-[800px] md:min-h-[1000px]  max-h-full relative"}>
+        <img
+            className="w-full  min-w-[350px]  h-auto contain absolute sm:bottom-0"
+            src={Image}
+            alt=""
+        />
       <div className={"mx-5 md:mx-52   relative "}>
         <div className="">
-          <div className={" h-fit    left-0 flex space-y-20"}>
+          <div className={"absolute h-fit top-48   left-0 flex space-y-20"}>
             <NumberTourUi numberTour={4} />
             <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
             <TitleCloseNumber text={"РЫБНАЯ ВЕЧЕРИНКА"} />
@@ -25,11 +30,7 @@ export const FiveCard = () => {
           </div>
         </div>
       </div>
-      <img
-        className="w-full  min-w-[200px] min-h-[200px] h-auto contain absolute bottom-0"
-        src={Image}
-        alt=""
-      />
+
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import {ReviewProps} from "./Review.props.ts";
+import { ReviewProps } from "./Review.props.ts";
 
 // export const Review = ({review}: ReviewProps) => {
 //     return <div className={"flex flex-col justify-center sm:flex w-full space-x-20"}>
@@ -16,12 +16,20 @@ import {ReviewProps} from "./Review.props.ts";
 //         </div>
 //     </div>
 // }
-export const Review = ({name, comment, img}: ReviewProps) => {
-    return <div className={"mx-auto  sm:flex w-fit items-center sm:space-x-20"}>
-         <img src={img}  className="mx-auto border-indigo-500 border-t-8 w-48 h-48 rounded-full" alt="Review"/>
-        <div className={"ml-0 space-y-3 text-start"}>
-                          <h1 className={"ml-0 text-3xl text-teal-500"}>{name}</h1>
-            <p className={" text-white break-words w-72 sm:w-[800px]"}>{comment}</p>
-        </div>
+export const Review = ({ name, comment, img }: ReviewProps) => {
+  return (
+    <div
+      className={"mx-auto space-y-10 xl:flex w-fit items-center xl:space-x-20"}
+    >
+      <img
+        src={img}
+        className="mx-auto border-indigo-500 border-t-8 w-72 h-72 rounded-full"
+        alt="Review"
+      />
+      <div className={"ml-0 space-y-3   text-start"}>
+        <h1 className={"ml-0 text-4xl text-teal-500"}>{name}</h1>
+        <p className={" text-white break-words w-72 sm:w-[800px]"}>{comment}</p>
+      </div>
     </div>
-}
+  );
+};

@@ -1,14 +1,3 @@
-.BackGroundFont {
-  background-image: url("../../assets/cards/backGroundSecondImage.png")
-    no-repeat;
-  z-index: -1;
-  height: 100%;
-  background-size: 100%;
-}
-
-.FirstCardInput {
-  z-index: 1;
-}
 .BackGroundFont:after {
   content: "";
   position: absolute;

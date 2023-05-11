@@ -1,0 +1,8 @@
+.FollowsContainer div {
+  /* width: 40%; */
+  height: 100%;
+}
+input {
+  border: none;
+  border-bottom: #181818 4px solid;
+}

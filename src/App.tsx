@@ -12,6 +12,7 @@ import {SixCard} from "./page-component/SixCard/SixCard.tsx";
 import {FiveCard} from "./page-component/FiveCard/FiveCard.tsx";
 import {FourCard} from "./page-component/fourCard/fourCard.tsx";
 import {ReviewContainer} from "./components/reviews/Reviews.container";
+import Birds from './assets/BirdsBackground.png';
 function App() {
 
     return (
@@ -24,6 +25,8 @@ function App() {
                 <NavigationMenu menu={MainPage.navigation}/>
                 {/*<img src="./assets/Logo.svg" className={"w-10 h-10"} alt=""/>*/}
                 <div className={"text-center grid  content-center sm:my-20"}>
+                    <img src={Birds} className={"left-0 right-0 mx-auto w-fit h-auto z-50 absolute"} alt=""/>
+
                     <h1 className={"mx-auto MainText text-5xl xl:text-9xl w-fit xl:w-[900px] break-words mt-48"}>{MainPage.title}</h1>
                     <div className={"flex justify-center space-x-0 sm:space-x-5 mt-10"}><Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ</Htag><Htag type={"h4"} className={"text-"}>С НАШЕЙ ПОМОЩЬЮ</Htag></div>
                     <ButtonTransparent className={"min-w-10  w-fit mx-auto"}><Htag type={'h2'} className="mt-0">Купить тур </Htag></ButtonTransparent>

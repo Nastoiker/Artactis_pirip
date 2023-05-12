@@ -15,6 +15,7 @@ import { useRef } from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
 import NAvbar from "./components/nav.beta";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+
 import Bird1 from "./assets/bitds/bird1.png";
 import Bird2 from "./assets/bitds/bird2.png";
 import Bird3 from "./assets/bitds/bird3.png";
@@ -27,9 +28,8 @@ function App() {
 
   return (
     <>
-      {// @ts-ignore */
-      }
-      <Parallax ref={parallax}>
+
+      <Parallax  ref={parallax} >
         <ParallaxLayer
           offset={0.2}
           speed={-0.3}

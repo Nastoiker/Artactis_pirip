@@ -15,7 +15,7 @@ export const NavigationMenu = ({ menu }: { menu: string[] }) => {
     console.log(1);
   };
   return (
-    <div className={"py-5 sm:flex justify-around"}>
+    <div className={" mx-auto sm:flex justify-around"}>
       <button
         className={"absolute bg-white top-20 w-fit right-20 block sm:hidden"}
         onClick={() => changeState}

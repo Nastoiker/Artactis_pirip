@@ -26,7 +26,7 @@ export const Review = ({ name, comment, img }: ReviewProps) => {
     >
       <img
         src={img}
-        className="mx-auto border-indigo-500 border-t-8 w-72 h-72 rounded-full"
+        className="mx-auto border-teal-500 border-t-8 w-72 h-72 rounded-full"
         alt="Review"
       />
       <div className={"ml-0 space-y-3   text-start"}>

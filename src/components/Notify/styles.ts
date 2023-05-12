@@ -14,9 +14,9 @@ export const Main = styled.div`
 
 export const Container = styled.div`
   position: fixed;
-  z-index: 1000;
+  z-index: 1000000;
   width: 0 auto;
-  bottom: 30px;
+  bottom: auto;
   margin: 0 auto;
   left: 30px;
   right: 30px;

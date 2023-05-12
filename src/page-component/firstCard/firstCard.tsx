@@ -9,9 +9,9 @@ export const FirstCard = () => {
           " FirstCardInput absolute mx-auto left-0 right-0   my-auto  xl:block  sm:top-48 xl:top-10 w-4/6 h-3/4  border border-4 border-red-800"
         }
       ></div> */}
-      <div className="hidden xl:block absolute -my-10 ml-32 border p-20  space-y-8  w-[600px] h-fit border-4 border-red-800"></div>
+      <div className="hidden lg:block absolute -my-12 ml-32 border h-58 p-24  space-y-10  w-[600px]  border-4 border-red-800"></div>
 
-      <div className="border m-10 p-5 lg:ml-48 space-y-8 md:w-[900px] lg:w-1/2 xl:w-1/3 h-fit border-4 border-red-800">
+      <div className=" border w-[90vw] m-10  p-5 lg:ml-48 space-y-8 lg:w-[900px] lg:w-1/2 lg:w-1/3 h-fit border-4 border-red-800">
         <div className={"w-fit z-50 md:w-[500px]"}>
           <Htag className={"text-start"} type={"h1"}>
             ВСЁ, ЧТО
@@ -20,12 +20,12 @@ export const FirstCard = () => {
             ВАМ НУЖНО ЗНАТЬ
           </Htag>
         </div>
-        <p className={"text-start  z-10 w-fit xl:w-5/6 break-words"}>
-          "Арктические просторы" - тур, включающий поездку на северо-запад //
-          Архангельской области, посещение древнего города Каргополя, //
-          местного музея культуры и быта народов Русского Севера, посещение //
-          нац. парка “Русская Арктика”, рыбалка на острове Мудьюг а также //
-          прогулку по реке Северной Двине с возможностью лицезреть северное //
+        <p className={"text-start mt-32  leading-8 z-10 w-fit xl:w-5/6 break-words"}>
+          "Арктические просторы" - тур, включающий поездку на северо-запад
+          Архангельской области, посещение древнего города Каргополя,
+          местного музея культуры и быта народов Русского Севера, посещение
+          нац. парка “Русская Арктика”, рыбалка на острове Мудьюг а также
+          прогулку по реке Северной Двине с возможностью лицезреть северное
           сияние.
         </p>
       </div>

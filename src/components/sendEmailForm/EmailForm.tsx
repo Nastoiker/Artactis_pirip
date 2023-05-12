@@ -18,7 +18,7 @@ export const EmailForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<FieldValue<any>>({});
+  } = useForm<{email: string}>({});
   const onSubmit = async () => {
     try {
       new Promise((resolve) => {
@@ -35,25 +35,26 @@ export const EmailForm = () => {
   };
   return (
     <form
-      className="FollowsContainer  min-h-screen-[800px] md:flex justify-around items-center p-10 md:p-20"
+      className="FollowsContainer  min-h-[500px] my-20 md:flex justify-around items-center p-10 md:p-20"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="w-full md:w-1/3">
-        <h1 className="text-start text-teal-500 text-2xl  md:text-4xl">
+        <h1 className="text-start text-teal-500 text-3xl  md:text-5xl">
           Оставьте свои контакты, чтоб узнавать об актуальных турах и новостях
           первым
         </h1>
       </div>
-      <div className="ml-0 h-full min-width-[50%] space-y-10">
+      <div className="ml-0 h-full sm:w-1/3 space-y-10">
         <Input
             {...register("email", {
-              required: { value: true, message: "Заполните login" },
+              required: { value: true, message: "Заполните email" },
             })}
             id={"email"}
+            error={errors.email}
           className="border-teal-500"
           placeholder="email"
         />
-        <ButtonTransparent className="p-5 ml-0 text-white">
+        <ButtonTransparent className="block p-5 ml-0 text-white">
           ПОДПИСАТЬСЯ
         </ButtonTransparent>
       </div>

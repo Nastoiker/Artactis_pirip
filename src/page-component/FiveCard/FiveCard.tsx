@@ -5,7 +5,7 @@ export const FiveCard = () => {
   return (
     <div className={"min-h-[800px] md:min-h-[1000px]  max-h-full relative"}>
         <img
-            className="w-full  min-w-[350px]  h-auto contain absolute sm:bottom-0"
+            className="w-full max-h-[900px] min-w-[350px] w-auto md:right-0  h-auto contain absolute sm:bottom-0"
             src={Image}
             alt=""
         />
@@ -15,18 +15,31 @@ export const FiveCard = () => {
             <NumberTourUi numberTour={4} />
             <hr className="absolute mt-20 ml-16 h-1 border-0 bg-red-700	  z-10 w-20 " />
             <TitleCloseNumber text={"РЫБНАЯ ВЕЧЕРИНКА"} />
-            <p
+            <div
               className={
                 "text-start z-10  text-2xl absolute w-full top-20  text-white"
               }
             >
-              - Поездка на границу Архангельской области и Республики Коми, в
-              пограничный город Эмба - Поездка на знаменитый маяк "Северная
-              Двина" - Рыбная вечеринка an-board лодки - Поездка на границу
-              Архангельской области и Республики Коми, в пограничный город Эмба
-              - Поездка на знаменитый маяк "Северная Двина" - Рыбная вечеринка
-              an-board лодки
+                <p> - Поездка на границу Архангельской области и Республики Коми, в
+                    пограничный город Эмба</p>
+                <p>- Поездка на знаменитый маяк "Северная
+                    Двина"</p>
+                <p>
+                    - Рыбная вечеринка an-board лодки
             </p>
+                <p>
+                    - Поездка на границу
+                    Архангельской области и Республики Коми, в пограничный город Эмба
+                </p>
+                <p>
+                    - Поездка на знаменитый маяк "Северная Двина"
+                </p>
+               <p>
+                   - Рыбная вечеринка
+                   an-board лодки
+               </p>
+
+            </div>
           </div>
         </div>
       </div>

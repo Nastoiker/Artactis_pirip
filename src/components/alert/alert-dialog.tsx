@@ -1,7 +1,6 @@
 
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
-
 import cn from 'classnames';
 const AlertDialog = AlertDialogPrimitive.Root
 
@@ -44,8 +43,8 @@ const AlertDialogContent = React.forwardRef<
         <AlertDialogPrimitive.Content
             ref={ref}
             className={cn(
-                "fixed z-50 grid w-full max-w-lg scale-100 gap-4 bg-white p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full",
-                "dark:bg-slate-900",
+                "fixed z-50 grid w-full max-w-lg  scale-100 gap-4 bg-teal-600 p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full",
+                "bg-slate-900",
                 className
             )}
             {...props}

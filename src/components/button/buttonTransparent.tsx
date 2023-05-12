@@ -12,7 +12,7 @@ export const ButtonTransparent = ({
   return (
     <button
       className={cn(
-        "ButtonTransparent  hover:bg-gray-800 hover:text-blue-200 transition-all border border-5 p-10 border-teal-300",
+        "ButtonTransparent  hover:bg-gray-800 hover:text-teal-600 transition-all border border-4 p-10 border-teal-600",
         className
       )}
       {...props}

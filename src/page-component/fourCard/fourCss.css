@@ -1,13 +1,7 @@
-.BackGroundFont:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -120px;
-  width: 100%;
-  height: 100px; /* Высота градиента */
-  background: linear-gradient(
-    to top,
-    rgba(131, 85, 85, 0) 0%,
-    rgb(24, 44, 60) 100%
-  ); /* Градиентный переход */
+
+@media (min-width: 1000px)  {
+  .BackGroundFont2
+  {
+    background-color: rgb(40, 45, 55);
+  }
 }

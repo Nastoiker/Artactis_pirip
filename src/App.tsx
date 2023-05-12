@@ -27,6 +27,8 @@ function App() {
 
   return (
     <>
+      {// @ts-ignore */
+      }
       <Parallax ref={parallax}>
         <ParallaxLayer
           offset={0.2}

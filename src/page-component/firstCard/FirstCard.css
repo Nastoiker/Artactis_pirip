@@ -6,12 +6,12 @@
 /*  height: 100%;*/
 /*}*/
 .BackGroundFont {
-  background-image: url("../../assets/cards/backGroundSecondImage.png") no-repeat;
+  background-image: url("../../assets/cards/backGroundSecondImage.png")
+    no-repeat;
   z-index: -1;
   height: 100%;
-   background-size: cover;
-    width: 1900px;
-
+  background-size: cover;
+  width: 1900px;
 }
 .FirstCardInput {
   z-index: 1;

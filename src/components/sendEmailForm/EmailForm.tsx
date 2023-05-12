@@ -1,36 +1,38 @@
-import {FieldValue, useForm} from "react-hook-form";
-import { Htag } from "../Htag/Htag";
+import { useForm } from "react-hook-form";
 import { Input } from "../input/input";
 import "./EmailForm.module.css";
-import {FieldsetHTMLAttributes, useRef, useState} from "react";
+import {useRef, useState } from "react";
 import { ButtonTransparent } from "../button/buttonTransparent";
-import  {MessageHub} from "../Notify/Notify";
-type AddFunction = (msg: string) => void
+import { MessageHub } from "../Notify/Notify";
+type AddFunction = (msg: string) => void;
 
 export const EmailForm = () => {
-  const ref = useRef<null | AddFunction>(null)
+  const ref = useRef<null | AddFunction>(null);
 
-  const [isLoading, setIsLoading] = useState<boolean>()
-  const [isError, setError] = useState<boolean>()
-  const [isCorrect, setIsCorrect] = useState<boolean>();
+  const [isLoading, setIsLoading] = useState<boolean>();
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<{email: string}>({});
+  } = useForm<{ email: string }>({});
   const onSubmit = async () => {
+    setIsLoading(true);
     try {
-      new Promise((resolve) => {
-        setTimeout(() => {
-          resolve("string"), 1000;
-        });
 
+      const fetch = await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("string")}, 1000,
+        );
       });
-      reset();
-      ref.current?.('Успешная регистрация')
-      setIsCorrect(true);
-      console.log(11);
+
+      if(fetch) {
+        reset();
+        setIsLoading(false);
+        ref.current?.("Вы подали заявку");
+        console.log(11);
+      }
+
     } catch (e) {}
   };
   return (
@@ -46,25 +48,25 @@ export const EmailForm = () => {
       </div>
       <div className="ml-0 h-full sm:w-1/3 space-y-10">
         <Input
-            {...register("email", {
-              required: { value: true, message: "Заполните email" },
-            })}
-            id={"email"}
-            error={errors.email}
+          {...register("email", {
+            required: { value: true, message: "Заполните email" },
+          })}
+          disabled={isLoading}
+          id={"email"}
+          error={errors.email}
           className="border-teal-500"
           placeholder="email"
         />
-        <ButtonTransparent className="block p-5 ml-0 text-white">
+        <ButtonTransparent disabled={isLoading} className="block p-5 ml-0 text-white">
           ПОДПИСАТЬСЯ
         </ButtonTransparent>
       </div>
 
-                 <MessageHub
-          children={(add: AddFunction) => {
-            ref.current = add
-          }}
+      <MessageHub
+        children={(add: AddFunction) => {
+          ref.current = add;
+        }}
       />
-
     </form>
   );
 };

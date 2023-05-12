@@ -6,19 +6,18 @@
   /*max-width: 1280px;*/
   margin: 0 auto;
   text-align: center;
-
 }
 
 @font-face {
   font-family: "GGKizhichBold ";
   src: local("GG KizhichBold"),
-  url("./fonts/GG Kizhich Bold.otf") format("truetype");
+    url("./fonts/GG Kizhich Bold.otf") format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: "GGKizhichRegular";
   src: local("GGKizhichRegular"),
-  url("./fonts/GG Kizhich Regular.otf") format("truetype");
+    url("./fonts/GG Kizhich Regular.otf") format("truetype");
   font-weight: normal;
 }
 .MainText {
@@ -37,7 +36,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .BackGroundMainPage {
-  background-image: url("./assets/mainImage.jpg") ;;
+  background-image: url("./assets/mainImage.jpg");
   z-index: -1;
   background-size: cover;
   width: 100%;
@@ -52,7 +51,7 @@
 /*  height: 100px; !* Высота градиента *!*/
 /*  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(24, 44, 60) 100%); !* Градиентный переход *!}*/
 .Map {
-  background-image: url("./assets/card.png") ;;
+  background-image: url("./assets/card.png");
   z-index: 50;
   background-size: 100% 100%;
   height: 100%;

@@ -4,9 +4,9 @@ import cn from "classnames";
 import styles from "./nav.module.css";
 export const NavigationMenu = ({ menu }: { menu: string[] }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-    const handleScroll = (ref) => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
-    };
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);

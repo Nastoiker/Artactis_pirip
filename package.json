@@ -7,13 +7,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:fix": "prettier --write \"**/*.+(tsx|ts|css|md)\""
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.3",
     "@react-spring/parallax": "^9.7.2",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-components-react-native": "^5.2.1",
     "classnames": "^2.3.2",
     "keen-slider": "^6.8.5",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",

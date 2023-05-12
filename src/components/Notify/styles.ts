@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { animated } from '@react-spring/web'
+import styled from "styled-components";
+import { animated } from "@react-spring/web";
 
 export const Main = styled.div`
   cursor: pointer;
@@ -10,7 +10,7 @@ export const Main = styled.div`
   align-items: center;
   height: 100%;
   justify-content: center;
-`
+`;
 
 export const Container = styled.div`
   position: fixed;
@@ -27,7 +27,7 @@ export const Container = styled.div`
   @media (max-width: 680px) {
     align-items: center;
   }
-`
+`;
 
 export const Message = styled(animated.div)`
   box-sizing: border-box;
@@ -37,7 +37,7 @@ export const Message = styled(animated.div)`
   @media (max-width: 680px) {
     width: 100%;
   }
-`
+`;
 
 export const Content = styled.div`
   color: white;
@@ -52,7 +52,7 @@ export const Content = styled.div`
   height: auto;
   border-radius: 3px;
   margin-top: 10px;
-`
+`;
 
 export const Button = styled.button`
   cursor: pointer;
@@ -70,7 +70,7 @@ export const Button = styled.button`
   :hover {
     color: rgba(255, 255, 255, 0.6);
   }
-`
+`;
 
 export const Life = styled(animated.div)`
   position: absolute;
@@ -79,4 +79,4 @@ export const Life = styled(animated.div)`
   width: auto;
   background-image: linear-gradient(130deg, #00b4e6, #00f0e0);
   height: 5px;
-`
+`;

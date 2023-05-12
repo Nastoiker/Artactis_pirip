@@ -1,7 +1,5 @@
-
-@media (min-width: 1000px)  {
-  .BackGroundFont2
-  {
+@media (min-width: 1000px) {
+  .BackGroundFont2 {
     background-color: rgb(40, 45, 55);
   }
 }

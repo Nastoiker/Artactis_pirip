@@ -1,14 +1,23 @@
-import {DetailedHTMLProps, HTMLAttributes, PropsWithChildren, ReactNode} from "react";
+import {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+} from "react";
 import cn from "classnames";
 import "./button.module.css";
-interface ButtonTransparentProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface ButtonTransparentProps
+  extends DetailedHTMLProps<
+    HTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   children: ReactNode;
 }
 export const ButtonTransparent = ({
   children,
   className,
-   ...props
-}:ButtonTransparentProps) => {
+  ...props
+}: ButtonTransparentProps) => {
   return (
     <button
       className={cn(

@@ -5,12 +5,16 @@ import "./fourCss.css";
 
 export const FourCard = () => {
   return (
-    <div className={" BackGroundFont2 min-h-screen xl:min-h-[1200px] max-h-full  relative "}>
-        <img
-            className="w-full  min-h-2/3 h-auto contain absolute sm:bottom-0"
-            src={Image}
-            alt=""
-        />
+    <div
+      className={
+        " BackGroundFont2 min-h-screen xl:min-h-[1200px] max-h-full  relative "
+      }
+    >
+      <img
+        className="w-full  min-h-2/3 h-auto contain absolute sm:bottom-0"
+        src={Image}
+        alt=""
+      />
       <div className={"mx-5 md:mx-52    relative "}>
         <div className="">
           <div
@@ -26,16 +30,19 @@ export const FourCard = () => {
                 "z-10 text-start text-2xl absolute w-full top-20  text-white"
               }
             >
-                <p>- Поездка на северо-восток Архангельской области в 150 км от
-                    города до Беломорска</p>
-                <p> - Визит музеев, связанных с людьми Поморья</p>
-                <p> -
-                    Прогулка по пляжу Белого моря - Рыбалка на острове Мудьюг</p>
+              <p>
+                - Поездка на северо-восток Архангельской области в 150 км от
+                города до Беломорска
+              </p>
+              <p> - Визит музеев, связанных с людьми Поморья</p>
+              <p>
+                {" "}
+                - Прогулка по пляжу Белого моря - Рыбалка на острове Мудьюг
+              </p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 };

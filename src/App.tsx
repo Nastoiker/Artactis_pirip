@@ -24,7 +24,7 @@ import Bird5 from "./assets/bitds/bird5.png";
 import Bird6 from "./assets/bitds/bird6.png";
 
 function App() {
-  const parallax = useRef<IParallax>(null!);
+  const parallax = useRef<any>(null!);
 
   return (
     <>

@@ -57,8 +57,8 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
     } catch (e) {}
   };
   return (
-    <div className={className}>
-      <AlertDialog >
+    <div className={cn(className, "")}>
+      <AlertDialog>
         <AlertDialogTrigger asChild>
           <ButtonTransparent className={"z-50 min-w-10 h-fit w-fit mx-auto"}>
             <Htag type={"h2"} className="mt-0">
@@ -66,14 +66,14 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
             </Htag>
           </ButtonTransparent>
         </AlertDialogTrigger>
-        <AlertDialogContent className={"overflow-auto h-full sm:h-auto"}>
+        <AlertDialogContent className={"overflow-auto scrollbar h-full sm:h-full"}>
           <AlertDialogHeader>
             <AlertDialogTitle>Арктические просторы</AlertDialogTitle>
           </AlertDialogHeader>
 
           <div
             ref={sliderRef}
-            className="keen-slider h-[90vh] sm:h-auto Check overflow-auto bg-teal-500 "
+            className="keen-slider h-[90vh] sm:h-[800px]  Check overflow-auto bg-teal-500 "
           >
             {BuyForm.map((r, index) => (
               <div className="keen-slider__slide w-full" key={index}>
@@ -83,7 +83,7 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
                   src={r.img}
                   alt=""
                 />
-                <p className={cn("Check m-5  block")}>{r.description}</p>
+                <p className={cn("Check m-5 text-2xl block")}>{r.description}</p>
               </div>
             ))}
           </div>
@@ -96,10 +96,10 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
                 })}
                 id={"email"}
                 error={errors.email}
-                className="block border-teal-500 text-white"
+                className="block border-white text-white"
                 placeholder="email"
               />
-              <ButtonTransparent className="w-full hover:text-white block p-5 ml-0 text-white border-white">
+              <ButtonTransparent className="w-full hover:text-white hover:bg-teal-500 block p-5 ml-0 text-white border-white">
                 ПОДПИСАТЬСЯ
               </ButtonTransparent>
             </div>
@@ -111,7 +111,7 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
             />
           </form>
           <AlertDialogFooter>
-            <AlertDialogCancel>закрыть</AlertDialogCancel>
+            <AlertDialogCancel  className={"w-full hover:bg-red-800"}>закрыть</AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

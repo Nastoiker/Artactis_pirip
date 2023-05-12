@@ -46,6 +46,7 @@
     z-index: 9999;
     right: 35vw;
     position: absolute;
+    transition: all 2s;
   }
   .menu {
     display: flex;

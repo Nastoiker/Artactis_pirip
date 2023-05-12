@@ -30,7 +30,6 @@ export const EmailForm = () => {
         reset();
         setIsLoading(false);
         ref.current?.("Вы подали заявку");
-        console.log(11);
       }
 
     } catch (e) {}

@@ -1,16 +1,20 @@
-import  { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import style from "./Navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
 
+
 const NAvbar = ({About, review, Map}: { About: any, review: any, Map: any}) => {
   const [nav, setNav] = useState(false);
+  const menu = useRef<any>(!null);
   const HandleScroll = (ref) => {
-      ref.current?.scrollIntoView({behavior: "smooth"});
-      setNav(false);
+    setNav(false);
+    ref.current?.scrollIntoView({behavior: "smooth"});
   }
+
+
   return (
-    <header className={style.header + " sm:mx-20 "}>
+    <header ref={menu} className={style.header + " sm:mx-20 "}>
       <div className="flex w-full justify-around">
         <div className={style.box}>
           <div className={style.logo_image}>

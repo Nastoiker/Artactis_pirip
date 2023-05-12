@@ -121,10 +121,8 @@ function App() {
                 <div
                   className={"flex justify-center space-x-0 sm:space-x-5 mt-10"}
                 >
-                  <Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ</Htag>
-                  <Htag type={"h4"} className={"text-white"}>
-                    С НАШЕЙ ПОМОЩЬЮ
-                  </Htag>
+                  <Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ  С НАШЕЙ ПОМОЩЬЮ</Htag>
+
                 </div>
                 <ButtonBuyForm className={"my-10"} />
               </ParallaxLayer>

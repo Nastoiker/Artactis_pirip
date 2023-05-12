@@ -1,3 +1,23 @@
 .Check {
   z-index: 99999999999999;
+
+}
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #a0b4b4;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 100vh;
+  border: none;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b9;
 }

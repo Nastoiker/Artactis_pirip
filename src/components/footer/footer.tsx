@@ -1,5 +1,10 @@
 import { Htag } from "../Htag/Htag.tsx";
 import Logo from "../../assets/Logo.svg";
+import Icon from "../../assets/iconsScoial/Badge-1.svg"
+import Icon2 from "../../assets/iconsScoial/Badge.svg"
+import Icon3 from "../../assets/iconsScoial/Badge-2.svg"
+
+
 export const Footer = () => {
   return (
     <div>
@@ -13,6 +18,11 @@ export const Footer = () => {
           <Htag type={"h2"} className="text-white text-extrabold">
             ArkhangleskTour
           </Htag>
+          <div className={"flex  py-5 sm:space-x-5"}>
+            <a href=""> <img width={30} src={Icon} alt=""/></a>
+            <a href=""> <img  width={30} src={Icon2} alt=""/></a>
+            <a href=""> <img width={30}  src={Icon3} alt=""/></a>
+          </div>
         </div>
         <div className="text-start ">
           <Htag type={"h2"}>Контакты</Htag>
@@ -24,7 +34,7 @@ export const Footer = () => {
           </p>
         </div>
         <div className="text-start  ">
-          <Htag type={"h2"}>Содержание</Htag>
+          <Htag type={"h2"}>Новости</Htag>
 
           <p>
             <a href="">Контакты</a>

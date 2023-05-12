@@ -16,8 +16,8 @@ export const ReviewContainer = ({ reviews }: ReviewContainerProps) => {
   return (
     <div ref={sliderRef} className="keen-slider">
       {reviews.map((r, index) => (
-        <div className="keen-slider__slide">
-          <Review key={index} name={r.name} img={r.img} comment={r.comment} />{" "}
+        <div   key={index} className="keen-slider__slide">
+          <Review name={r.name} img={r.img} comment={r.comment} />{" "}
         </div>
       ))}
     </div>

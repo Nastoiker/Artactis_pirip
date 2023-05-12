@@ -28,7 +28,7 @@ export const Review = ({ name, comment, img }: ReviewProps) => {
       />
       <div className={"ml-0 space-y-3   text-start"}>
         <h1 className={"ml-0 text-4xl text-teal-500"}>{name}</h1>
-        <p className={" text-white break-words w-72 sm:w-[800px]"}>{comment}</p>
+        <p className={" text-white  text-xl leading-8 break-words w-[80vw] sm:w-[800px]"}>{comment}</p>
       </div>
     </div>
   );

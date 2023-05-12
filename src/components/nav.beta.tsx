@@ -3,8 +3,12 @@ import style from "./Navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
 
-const NAvbar = () => {
+const NAvbar = ({About, review, Map}: { About: any, review: any, Map: any}) => {
   const [nav, setNav] = useState(false);
+  const HandleScroll = (ref) => {
+      ref.current?.scrollIntoView({behavior: "smooth"});
+      setNav(false);
+  }
   return (
     <header className={style.header + " sm:mx-20 "}>
       <div className="flex w-full justify-around">
@@ -21,19 +25,13 @@ const NAvbar = () => {
             }
           >
             <li>
-              <a href="##">Product</a>
+              <a onClick={() => HandleScroll(Map)}>Тур</a>
             </li>
             <li>
-              <a href="##">About Us</a>
+              <a onClick={() => HandleScroll(About)} >О нас</a>
             </li>
             <li>
-              <a href="##">Customers</a>
-            </li>
-            <li>
-              <a href="##">Price</a>
-            </li>
-            <li>
-              <a href="##">Contacts</a>
+              <a  onClick={() => HandleScroll(review)} >Отзывы</a>
             </li>
           </ul>
           <div onClick={() => setNav(!nav)} className={style.mobile_btn}>

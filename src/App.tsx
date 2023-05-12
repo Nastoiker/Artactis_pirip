@@ -4,6 +4,8 @@ import { Htag } from "./components/Htag/Htag.tsx";
 import { FirstCard } from "./page-component/firstCard/firstCard.tsx";
 import { SecondCard } from "./page-component/secondCard/secondCard.tsx";
 import Woman from "./assets/reviews/Victoria.jpg";
+import Man from "./assets/reviews/Man.jpg";
+import Woman2 from "./assets/reviews/woman2.jpg"
 import { ThirdCard } from "./page-component/thirdCard/ThirdCard.tsx";
 import { SixCard } from "./page-component/SixCard/SixCard.tsx";
 import { FiveCard } from "./page-component/FiveCard/FiveCard.tsx";
@@ -11,7 +13,7 @@ import { FourCard } from "./page-component/fourCard/fourCard.tsx";
 import { ReviewContainer } from "./components/reviews/Review.container";
 import { EmailForm } from "./components/sendEmailForm/EmailForm.tsx";
 import { Footer } from "./components/footer/footer.tsx";
-import { useRef } from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
 import NAvbar from "./components/nav.beta";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
@@ -25,7 +27,9 @@ import Bird6 from "./assets/bitds/bird6.png";
 
 function App() {
   const parallax = useRef<any>(null!);
-
+  const Map  = useRef<any>(null!);
+  const About  = useRef<any>(null!);
+  const Review  = useRef<any>(null!);
   return (
     <>
 
@@ -102,7 +106,7 @@ function App() {
               "  my-0  min-h-screen contain bg-no-repeat w-full mx-auto gap-5  BackGroundMainPage h-full text-white"
             }
           >
-            <NAvbar />
+            <NAvbar Map={Map} review={Review} About={About} />
             {/*<NavigationMenu menu={MainPage.navigation} />*/}
             {/*<img src="./assets/Logo.svg" className={"w-10 h-10"} alt=""/>*/}
             <div className={"text-center grid  content-center sm:my-20"}>
@@ -126,11 +130,10 @@ function App() {
               </ParallaxLayer>
             </div>
           </div>
-          <div className={" mx-auto"}>
-            {" "}
+          <div  ref={About} className={" mx-auto"}>
             <FirstCard />
           </div>
-          <div className={"Map my-48"}>
+          <div ref={Map} className={"Map my-48"}>
             <SecondCard />
             <ThirdCard />
             <FourCard />
@@ -141,20 +144,26 @@ function App() {
             НАШИ ОТЗЫВЫ
           </Htag>
 
-          <div className={"flex content-center"}>
+          <div ref={Review} className={"flex content-center"}>
             <ReviewContainer
               reviews={[
                 {
-                  name: "asdasdas",
+                  name: "Виктория",
                   comment:
-                    "asdasdadasdasdasdadasdasdasdadasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasdasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasd",
+                    "Ездили в морозы в Сию+Холмогоры. Очень понравилось,несмотря на жуткий мороз, всё было достаточно хорошо организовано, тёплый автобус,информационное сопровождение. отдельное спасибо гиду,женщине, к сожалению не помню её имени. Отличный профессионал своего дела, хороший экскурсовод, было интересно и содержательно. Большое спасибо. Обязательно поеду с вами ещё и порекомендую знакомым и друзьям.",
                   img: Woman,
                 },
                 {
-                  name: "asdasdas",
+                  name: "Дмитрий",
                   comment:
-                    "asdasdadasdasdasdadasdasdasdadasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasdasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdasdadasdasdadasdasd",
-                  img: Woman,
+                    "Гостеприимные жители, отзывчивые, можно уловить хороший день,много развлекаловок ( от кафе до музеев), белые ночи. Тем, кто любит, перемены - вам в Архангельск",
+                  img: Man,
+                },
+                {
+                  name: "Анна",
+                  comment:
+                      "Гостеприимные жители, отзывчивые, можно уловить хороший день,много развлекаловок ( от кафе до музеев), белые ночи. Тем, кто любит, перемены - вам в Архангельск",
+                  img: Woman2,
                 },
               ]}
             />

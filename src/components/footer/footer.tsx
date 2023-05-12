@@ -5,7 +5,11 @@ import Icon2 from "../../assets/iconsScoial/Badge.svg"
 import Icon3 from "../../assets/iconsScoial/Badge-2.svg"
 
 
-export const Footer = () => {
+export const Footer = ({to}: {to:any}) => {
+  const HandleScroll = (ref) => {
+    ref.current?.scrollIntoView({behavior: "smooth"});
+    console.log(1);
+  }
   return (
     <div>
       <div
@@ -13,11 +17,14 @@ export const Footer = () => {
           "text-teal-500  transparent border border-y-4 border-teal-500 border-x-0 w-full justify-between sm:justify-around  space-y-10 sm:space-y-1 items-center flex flex-wrap h-fit z-10 p-10 "
         }
       >
-        <div className="text-start" onClick={() => window.scrollTo(0, 0)}>
-          <img src={Logo} alt="" className="mx-auto text-teal-500" />
-          <Htag type={"h2"} className="text-white text-extrabold">
-            ArkhangleskTour
-          </Htag>
+        <div className="text-start" >
+          <div onClick={() =>HandleScroll(to)}>
+            <img  src={Logo} alt="" className="mx-auto text-teal-500" />
+            <Htag type={"h2"} className="text-white text-extrabold">
+              ArkhangleskTour
+            </Htag>
+          </div>
+
           <div className={"flex  py-5 sm:space-x-5"}>
             <a href=""> <img width={30} src={Icon} alt=""/></a>
             <a href=""> <img  width={30} src={Icon2} alt=""/></a>

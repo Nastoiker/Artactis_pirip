@@ -30,6 +30,7 @@ function App() {
   const Map  = useRef<any>(null!);
   const About  = useRef<any>(null!);
   const Review  = useRef<any>(null!);
+  const Main = useRef<any>(null!);
   return (
     <>
 
@@ -105,6 +106,7 @@ function App() {
             className={
               "  my-0  min-h-screen contain bg-no-repeat w-full mx-auto gap-5  BackGroundMainPage h-full text-white"
             }
+            ref={Main}
           >
             <NAvbar Map={Map} review={Review} About={About} />
             {/*<NavigationMenu menu={MainPage.navigation} />*/}
@@ -167,7 +169,7 @@ function App() {
             />
           </div>
           <EmailForm />
-          <Footer />
+          <Footer to={Main}/>
         </div>
       </Parallax>
     </>

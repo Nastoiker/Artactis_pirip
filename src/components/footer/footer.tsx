@@ -5,7 +5,7 @@ export const Footer = () => {
     <div>
       <div
         className={
-          "text-teal-500 transparent border border-y-4 border-teal-500 border-x-0 w-full justify-around  space-y-10 sm:space-y-1 items-center flex flex-wrap h-fit z-10 p-10 "
+          "text-teal-500  transparent border border-y-4 border-teal-500 border-x-0 w-full justify-around  space-y-10 sm:space-y-1 items-center flex flex-wrap h-fit z-10 p-10 "
         }
       >
         <div className="text-start" onClick={() => window.scrollTo(0, 0)}>

@@ -57,7 +57,7 @@ export const EmailForm = () => {
           className="border-teal-500"
           placeholder="email"
         />
-        <ButtonTransparent disabled={isLoading} className="block p-5 ml-0 text-white">
+        <ButtonTransparent className="block p-5 ml-0 text-white">
           ПОДПИСАТЬСЯ
         </ButtonTransparent>
       </div>

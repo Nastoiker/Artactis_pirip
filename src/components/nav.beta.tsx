@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import style from "./Navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
@@ -17,7 +17,7 @@ const NAvbar = () => {
           </div>
           <ul
             className={
-              nav ? [style.menu, style.active].join(" ") : [style.menu]
+              nav ? (style.menu +" "+  style.active) : style.menu
             }
           >
             <li>
@@ -50,7 +50,7 @@ const NAvbar = () => {
                 </svg>
               </div>
             ) : (
-              <div className={"mr-20"}>
+              <div className={"sm:mr-20"}>
                 <svg
                   height={30}
                   fill={"white"}

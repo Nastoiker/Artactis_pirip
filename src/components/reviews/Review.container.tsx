@@ -2,7 +2,6 @@ import { ReviewContainerProps } from "./ReviewsContainer.props.ts";
 import { Review } from "./Review.tsx";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-import { Htag } from "../Htag/Htag.tsx";
 export const ReviewContainer = ({ reviews }: ReviewContainerProps) => {
   const [sliderRef] = useKeenSlider(
     {

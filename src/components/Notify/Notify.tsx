@@ -36,14 +36,18 @@ export function MessageHub({
       await next({ life: "0%" });
     },
     leave: [{ opacity: 0 }, { height: 0 }],
-    onRest: (  item) => {
+        // @ts-ignore */
+
+        onRest: (result, ctrl, item) => {
       setItems((state) =>
         state.filter((i) => {
           return i.key !== item.key;
         })
       );
     },
-    config: ( phase) => (key) =>
+  /*
+// @ts-ignore */
+    config: (item, index, phase) => (key) =>
       phase === "enter" && key === "life" ? { duration: timeout } : config,
   });
 

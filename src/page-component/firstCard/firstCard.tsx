@@ -1,5 +1,4 @@
 import { Htag } from "../../components/Htag/Htag.tsx";
-import Image from "../../assets/cards/firstCard.jpg";
 import "./FirstCard.css";
 export const FirstCard = () => {
   return (

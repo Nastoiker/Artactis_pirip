@@ -11,7 +11,7 @@ import { FourCard } from "./page-component/fourCard/fourCard.tsx";
 import { ReviewContainer } from "./components/reviews/Review.container";
 import { EmailForm } from "./components/sendEmailForm/EmailForm.tsx";
 import { Footer } from "./components/footer/footer.tsx";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
 import NAvbar from "./components/nav.beta";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
@@ -23,10 +23,8 @@ import Bird5 from "./assets/bitds/bird5.png";
 import Bird6 from "./assets/bitds/bird6.png";
 
 function App() {
-  const myRef = useRef(null);
   const parallax = useRef<IParallax>(null!);
 
-  const executeScroll = () => myRef.current.scrollIntoView();
   return (
     <>
       <Parallax ref={parallax}>

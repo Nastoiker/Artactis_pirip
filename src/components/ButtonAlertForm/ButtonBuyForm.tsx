@@ -1,9 +1,7 @@
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -17,17 +15,15 @@ import { ButtonTransparent } from "../button/buttonTransparent";
 import { Htag } from "../Htag/Htag";
 import { useKeenSlider } from "keen-slider/react";
 import { BuyForm } from "../../data/data";
-import {DetailedHTMLProps, HTMLAttributes, useRef, useState} from "react";
+import {DetailedHTMLProps, HTMLAttributes, useRef} from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "../input/input";
 import { MessageHub } from "../Notify/Notify";
 import cn from "classnames";
 type AddFunction = (msg: string) => void;
-interface ButtonBuyFormProps  extends DetailedHTMLProps<
+type ButtonBuyFormProps = DetailedHTMLProps<
 HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement >{
-
-}
+    HTMLDivElement >
 export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
   const ref = useRef<null | AddFunction>(null);
 
@@ -41,9 +37,7 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
       // add plugins here
     ]
   );
-  const [isLoading, setIsLoading] = useState<boolean>();
-  const [isError, setError] = useState<boolean>();
-  const [isCorrect, setIsCorrect] = useState<boolean>();
+
   const {
     register,
     handleSubmit,
@@ -59,13 +53,12 @@ export const ButtonBuyForm = ({ className }:ButtonBuyFormProps) => {
       });
       reset();
       ref.current?.("Вы подали заявку");
-      setIsCorrect(true);
       console.log(11);
     } catch (e) {}
   };
   return (
     <div className={className}>
-      <AlertDialog className={"h-fit"}>
+      <AlertDialog >
         <AlertDialogTrigger asChild>
           <ButtonTransparent className={"z-50 min-w-10 h-fit w-fit mx-auto"}>
             <Htag type={"h2"} className="mt-0">

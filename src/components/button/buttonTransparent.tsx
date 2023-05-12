@@ -1,7 +1,6 @@
 import {
   DetailedHTMLProps,
   HTMLAttributes,
-  PropsWithChildren,
   ReactNode,
 } from "react";
 import cn from "classnames";

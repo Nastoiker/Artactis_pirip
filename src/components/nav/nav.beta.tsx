@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import styles from "./navbar.module.css";
-import Logo from "../assets/Logo.svg";
-import { Htag } from "./Htag/Htag";
+import Logo from "../../assets/Logo.svg";
+import { Htag } from "../Htag/Htag";
 
 const NAvbar = ({
   About,

@@ -13,9 +13,9 @@ import { FourCard } from "./page-component/fourCard/fourCard.tsx";
 import { ReviewContainer } from "./components/reviews/Review.container";
 import { EmailForm } from "./components/sendEmailForm/EmailForm.tsx";
 import { Footer } from "./components/footer/footer.tsx";
-import {  useRef } from "react";
+import { useRef } from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
-import NAvbar from "./components/nav.beta";
+import NAvbar from "./components/nav/nav.beta.tsx";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Bird1 from "./assets/bitds/bird1.png";

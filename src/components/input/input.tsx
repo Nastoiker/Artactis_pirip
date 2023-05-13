@@ -12,13 +12,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <>
         <input
-          className={cn("w-full py-5 bg-transparent", className)}
+          className={cn("w-full text-white py-5 bg-transparent", className)}
           type="text"
           ref={ref}
           {...props}
         />
         {error && (
-          <span className={"block text-red-200 my-2"}>{error.message}</span>
+          <span className={"block text-white my-2"}>{error.message}</span>
         )}
       </>
     );

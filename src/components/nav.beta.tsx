@@ -1,5 +1,5 @@
-import {  useRef, useState } from "react";
-import style from "./Navbar.module.css";
+import { useRef, useState } from "react";
+import style from "./navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
 

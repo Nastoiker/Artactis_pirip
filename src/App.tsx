@@ -32,8 +32,8 @@ function App() {
   const Review = useRef<any>(null!);
   const Main = useRef<any>(null!);
   return (
-    <>
-      <Parallax pages={12} ref={parallax}>
+    <div  className={"max-h-[900px]"}>
+      <Parallax pages={10} ref={parallax}>
         <ParallaxLayer
           offset={0.2}
           speed={-0.3}
@@ -173,7 +173,7 @@ function App() {
           <Footer to={Main} />
         </div>
       </Parallax>
-    </>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 @media (min-width: 1000px) {
   .BackGroundFont2 {
+    z-index: -1;
     background-color: rgb(40, 45, 55);
   }
 }

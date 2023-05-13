@@ -1,17 +1,23 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "./Navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
 
-
-const NAvbar = ({About, review, Map}: { About: any, review: any, Map: any}) => {
+const NAvbar = ({
+  About,
+  review,
+  Map,
+}: {
+  About: any;
+  review: any;
+  Map: any;
+}) => {
   const [nav, setNav] = useState(false);
   const menu = useRef<any>(!null);
   const HandleScroll = (ref) => {
     setNav(false);
-    ref.current?.scrollIntoView({behavior: "smooth"});
-  }
-
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header ref={menu} className={style.header + " sm:mx-20 "}>
@@ -23,19 +29,15 @@ const NAvbar = ({About, review, Map}: { About: any, review: any, Map: any}) => {
               ArkhangleskTour
             </Htag>
           </div>
-          <ul
-            className={
-              nav ? (style.menu +" "+  style.active) : style.menu
-            }
-          >
+          <ul className={nav ? style.menu + " " + style.active : style.menu}>
+            <li>
+              <a onClick={() => HandleScroll(About)}>О нас</a>
+            </li>
             <li>
               <a onClick={() => HandleScroll(Map)}>Тур</a>
             </li>
             <li>
-              <a onClick={() => HandleScroll(About)} >О нас</a>
-            </li>
-            <li>
-              <a  onClick={() => HandleScroll(review)} >Отзывы</a>
+              <a onClick={() => HandleScroll(review)}>Отзывы</a>
             </li>
           </ul>
           <div onClick={() => setNav(!nav)} className={style.mobile_btn}>

@@ -96,6 +96,10 @@ export const ButtonBuyForm = ({ className }: ButtonBuyFormProps) => {
               <Input
                 {...register("email", {
                   required: { value: true, message: "Заполните email" },
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "Введите  email",
+                  },
                 })}
                 id={"email"}
                 error={errors.email}

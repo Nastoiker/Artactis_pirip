@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Input } from "../input/input";
 import "./EmailForm.module.css";
-import {useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ButtonTransparent } from "../button/buttonTransparent";
 import { MessageHub } from "../Notify/Notify";
 type AddFunction = (msg: string) => void;
@@ -19,19 +19,17 @@ export const EmailForm = () => {
   const onSubmit = async () => {
     setIsLoading(true);
     try {
-
       const fetch = await new Promise((resolve) => {
         setTimeout(() => {
-          resolve("string")}, 1000,
-        );
+          resolve("string");
+        }, 1000);
       });
 
-      if(fetch) {
+      if (fetch) {
         reset();
         setIsLoading(false);
         ref.current?.("Вы подали заявку");
       }
-
     } catch (e) {}
   };
   return (
@@ -49,6 +47,10 @@ export const EmailForm = () => {
         <Input
           {...register("email", {
             required: { value: true, message: "Заполните email" },
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: "Введите  email",
+            },
           })}
           disabled={isLoading}
           id={"email"}

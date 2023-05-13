@@ -5,7 +5,7 @@ import { FirstCard } from "./page-component/firstCard/firstCard.tsx";
 import { SecondCard } from "./page-component/secondCard/secondCard.tsx";
 import Woman from "./assets/reviews/Victoria.jpg";
 import Man from "./assets/reviews/Man.jpg";
-import Woman2 from "./assets/reviews/woman2.jpg"
+import Woman2 from "./assets/reviews/woman2.jpg";
 import { ThirdCard } from "./page-component/thirdCard/ThirdCard.tsx";
 import { SixCard } from "./page-component/SixCard/SixCard.tsx";
 import { FiveCard } from "./page-component/FiveCard/FiveCard.tsx";
@@ -13,7 +13,7 @@ import { FourCard } from "./page-component/fourCard/fourCard.tsx";
 import { ReviewContainer } from "./components/reviews/Review.container";
 import { EmailForm } from "./components/sendEmailForm/EmailForm.tsx";
 import { Footer } from "./components/footer/footer.tsx";
-import {useEffect, useLayoutEffect, useRef, useState} from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
 import NAvbar from "./components/nav.beta";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
@@ -27,14 +27,13 @@ import Bird6 from "./assets/bitds/bird6.png";
 
 function App() {
   const parallax = useRef<any>(null!);
-  const Map  = useRef<any>(null!);
-  const About  = useRef<any>(null!);
-  const Review  = useRef<any>(null!);
+  const Map = useRef<any>(null!);
+  const About = useRef<any>(null!);
+  const Review = useRef<any>(null!);
   const Main = useRef<any>(null!);
   return (
     <>
-
-      <Parallax  ref={parallax} >
+      <Parallax ref={parallax}>
         <ParallaxLayer
           offset={0.2}
           speed={-0.3}
@@ -113,24 +112,26 @@ function App() {
             {/*<img src="./assets/Logo.svg" className={"w-10 h-10"} alt=""/>*/}
             <div className={"text-center grid  content-center sm:my-20"}>
               <ParallaxLayer offset={0.1} speed={1.5}>
-                <h1
-                  className={
-                    "mx-auto MainText text-5xl xl:text-9xl w-fit xl:w-[900px] break-words mt-48"
-                  }
-                >
-                  {MainPage.title}
-                </h1>
+                <div>
+                  <h1
+                    className={
+                      "mx-auto MainText text-5xl xl:text-9xl w-fit xl:w-[900px] break-words mt-48"
+                    }
+                  >
+                    {MainPage.title}
+                  </h1>
+                </div>
+
                 <div
                   className={"flex justify-center space-x-0 sm:space-x-5 mt-10"}
                 >
-                  <Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ  С НАШЕЙ ПОМОЩЬЮ</Htag>
-
+                  <Htag type={"h4"}>ОКАЖИСЬ В СКАЗКЕ С НАШЕЙ ПОМОЩЬЮ</Htag>
                 </div>
                 <ButtonBuyForm className={"my-10"} />
               </ParallaxLayer>
             </div>
           </div>
-          <div  ref={About} className={" mx-auto"}>
+          <div ref={About} className={" mx-auto"}>
             <FirstCard />
           </div>
           <div ref={Map} className={"Map my-48"}>
@@ -162,14 +163,14 @@ function App() {
                 {
                   name: "Анна",
                   comment:
-                      "Гостеприимные жители, отзывчивые, можно уловить хороший день,много развлекаловок ( от кафе до музеев), белые ночи. Тем, кто любит, перемены - вам в Архангельск",
+                    "Гостеприимные жители, отзывчивые, можно уловить хороший день,много развлекаловок ( от кафе до музеев), белые ночи. Тем, кто любит, перемены - вам в Архангельск",
                   img: Woman2,
                 },
               ]}
             />
           </div>
           <EmailForm />
-          <Footer to={Main}/>
+          <Footer to={Main} />
         </div>
       </Parallax>
     </>

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import style from "./navbar.module.css";
+import styles from "./navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
 
@@ -20,16 +20,16 @@ const NAvbar = ({
   };
 
   return (
-    <header ref={menu} className={style.header + " sm:mx-20 "}>
+    <header ref={menu} className={styles.header + " sm:mx-20 "}>
       <div className="flex w-full justify-around">
-        <div className={style.box}>
-          <div className={style.logo_image}>
+        <div className={styles.box}>
+          <div className={styles.logo_image}>
             <img src={Logo} alt="" className="z-50 mx-auto " />
             <Htag type={"h2"} className="text-white text-extrabold">
               ArkhangleskTour
             </Htag>
           </div>
-          <ul className={nav ? style.menu + " " + style.active : style.menu}>
+          <ul className={nav ? styles.menu + " " + styles.active : styles.menu}>
             <li>
               <a onClick={() => HandleScroll(About)}>О нас</a>
             </li>
@@ -40,9 +40,9 @@ const NAvbar = ({
               <a onClick={() => HandleScroll(review)}>Отзывы</a>
             </li>
           </ul>
-          <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
+          <div onClick={() => setNav(!nav)} className={styles.mobile_btn}>
             {nav ? (
-              <div className={style.close}>
+              <div className={styles.close}>
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

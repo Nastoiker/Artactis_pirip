@@ -5,7 +5,7 @@ import Icon2 from "../../assets/iconsScoial/Badge.svg";
 import Icon3 from "../../assets/iconsScoial/Badge-2.svg";
 
 export const Footer = ({ to }: { to: any }) => {
-  const HandleScroll = (ref) => {
+  const HandleScroll = (ref:any) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
     console.log(1);
   };

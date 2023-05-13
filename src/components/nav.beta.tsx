@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import style from "./Navbar.module.css";
 import Logo from "../assets/Logo.svg";
 import { Htag } from "./Htag/Htag";
@@ -14,7 +14,7 @@ const NAvbar = ({
 }) => {
   const [nav, setNav] = useState(false);
   const menu = useRef<any>(!null);
-  const HandleScroll = (ref) => {
+  const HandleScroll = (ref: any) => {
     setNav(false);
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };

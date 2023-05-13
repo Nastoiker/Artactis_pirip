@@ -13,10 +13,10 @@ import { FourCard } from "./page-component/fourCard/fourCard.tsx";
 import { ReviewContainer } from "./components/reviews/Review.container";
 import { EmailForm } from "./components/sendEmailForm/EmailForm.tsx";
 import { Footer } from "./components/footer/footer.tsx";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {  useRef } from "react";
 import { ButtonBuyForm } from "./components/ButtonAlertForm/ButtonBuyForm";
 import NAvbar from "./components/nav.beta";
-import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Bird1 from "./assets/bitds/bird1.png";
 import Bird2 from "./assets/bitds/bird2.png";
@@ -33,7 +33,7 @@ function App() {
   const Main = useRef<any>(null!);
   return (
     <>
-      <Parallax ref={parallax}>
+      <Parallax pages={12} ref={parallax}>
         <ParallaxLayer
           offset={0.2}
           speed={-0.3}
